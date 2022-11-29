@@ -1,6 +1,16 @@
 <?php
 
+function random_password($passwordLen)
+{
 
+    $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
+    return substr(str_shuffle($data), 0, $passwordLen);
+}
+
+
+$newPassword = random_password($_GET['passwordLen']);
+
+var_dump($newPassword);
 
 ?>
 
@@ -40,6 +50,10 @@
                     </div>
                 </form>
             </section>
+
+            <div class="results mt-5 text-center p-5">
+                <p>La nuova password è: <?= $newPassword ?></p>
+            </div>
         </div>
     </main>
     <!-- /#site_main -->
