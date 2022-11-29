@@ -1,16 +1,8 @@
 <?php
 
-function random_password($passwordLen)
-{
+include __DIR__ . "/functions.php";
 
-    $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
-    return substr(str_shuffle($data), 0, $passwordLen);
-}
-
-
-$newPassword = random_password($_GET['passwordLen']);
-
-var_dump($newPassword);
+//var_dump($newPassword);
 
 ?>
 
